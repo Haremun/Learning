@@ -1,6 +1,6 @@
 package enums;
 
-public enum CardSymbols {
+public enum CardRank {
     Nine,
     Ten,
     Jack,

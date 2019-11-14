@@ -1,6 +1,6 @@
 package enums;
 
-public enum CardColors {
+public enum CardColor {
     Trefl,
     Karo,
     Pik,
