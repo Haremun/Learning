@@ -1,3 +1,5 @@
+package cards;
+
 import enums.CardColor;
 import enums.CardRank;
 
@@ -19,7 +21,7 @@ public class Card {
 
     @Override
     public String toString() {
-        return "Card{" +
+        return "cards.Card{" +
                 "rank=" + rank +
                 ", color=" + color +
                 '}';

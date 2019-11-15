@@ -1,3 +1,5 @@
+package cards;
+
 import enums.CardColor;
 import enums.CardRank;
 
@@ -5,10 +7,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-class CardsCollection {
+public class CardsCollection {
     private List<Card> cardsCollection;
 
-    CardsCollection() {
+    public CardsCollection() {
         cardsCollection = new ArrayList<>();
 
         CardColor[] colors = CardColor.values();
@@ -23,14 +25,18 @@ class CardsCollection {
 
     }
 
-    void shuffle() {
+    public void shuffle() {
         Collections.shuffle(cardsCollection);
     }
 
-    void showCards() {
+    public void showCards() {
         for (Card card :
                 cardsCollection) {
             System.out.println(card.toString());
         }
+    }
+
+    public List<Card> getCardsCollection() {
+        return cardsCollection;
     }
 }
