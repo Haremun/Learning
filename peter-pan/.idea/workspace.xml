@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00d31f32-9074-4583-b641-f52636c21c0c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/players/Players.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/players/PlayersCollection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -11,13 +11,18 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Card.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/CardsCollection.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Players.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Players.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cards/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CardsCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cards/CardsCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Players.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/cards/CardsCollection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/players/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/players/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/players/Players.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/players/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Players.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cards/CardsCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cards/Cards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/players/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/players/Players.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +108,10 @@
       <updated>1573728538474</updated>
       <workItem from="1573728542064" duration="91000" />
       <workItem from="1573756027073" duration="3410000" />
-      <workItem from="1573812303496" duration="4066000" />
+      <workItem from="1573812303496" duration="5460000" />
+      <workItem from="1573819709883" duration="2424000" />
+      <workItem from="1573827750591" duration="693000" />
+      <workItem from="1573833696099" duration="2656000" />
     </task>
     <servers />
   </component>

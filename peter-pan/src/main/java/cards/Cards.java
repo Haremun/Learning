@@ -7,10 +7,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class CardsCollection {
+public class Cards {
     private List<Card> cardsCollection;
 
-    public CardsCollection() {
+    public Cards() {
         cardsCollection = new ArrayList<>();
 
         CardColor[] colors = CardColor.values();
