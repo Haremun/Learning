@@ -6,5 +6,6 @@ public enum CardRank {
     Jack,
     Queen,
     King,
-    Ace
+    Ace,
+    Black_widow
 }

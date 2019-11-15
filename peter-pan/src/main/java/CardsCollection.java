@@ -14,15 +14,20 @@ class CardsCollection {
         CardColor[] colors = CardColor.values();
         CardRank[] ranks = CardRank.values();
         for (CardRank rank : ranks)
-            for (CardColor color : colors) {
-                cardsCollection.add(new Card(rank, color));
-            }
+            if (rank != CardRank.Black_widow)
+                for (CardColor color : colors) {
+                    cardsCollection.add(new Card(rank, color));
+                }
+            else
+                cardsCollection.add(new Card(rank, null));
 
     }
-    void shuffle(){
+
+    void shuffle() {
         Collections.shuffle(cardsCollection);
     }
-    void showCards(){
+
+    void showCards() {
         for (Card card :
                 cardsCollection) {
             System.out.println(card.toString());
