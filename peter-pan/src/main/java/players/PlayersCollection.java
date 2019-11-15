@@ -18,7 +18,7 @@ public class PlayersCollection {
         this.numberOfPlayers = numberOfPlayers;
 
         if (numberOfPlayers > 1 && numberOfPlayers < 5)
-            for (int i = 1; i <= numberOfPlayers; i++)
+            for (int i = 0; i < numberOfPlayers; i++)
                 players.add(new Player(i));
         else
             throw new IllegalArgumentException("You can only create 2-4 players");

@@ -24,7 +24,7 @@ class Player {
             playerHand.remove(card);
             return card;
         } else {
-            throw new IllegalStateException("Player has no cards");
+            throw new IllegalStateException("Player " + playerId + " has no cards");
         }
 
     }

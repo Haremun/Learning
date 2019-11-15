@@ -22,7 +22,7 @@ public class PlayersManagement {
             playersCollection.getPlayer(playerId).addCardToHand(card);
         }
     }
-    public boolean checkWin(int playerdId){
-        return playersCollection.getPlayer(playerdId).getNumberOfCardsInHand() < 1;
+    public boolean checkWin(int playerId){
+        return playersCollection.getPlayer(playerId).getNumberOfCardsInHand() < 1;
     }
 }
