@@ -1,7 +1,5 @@
 import cards.Card;
 import cards.Cards;
-import enums.CardColor;
-import enums.CardRank;
 import players.PlayersCollection;
 import players.PlayersManagement;
 
@@ -9,35 +7,35 @@ import java.util.Arrays;
 
 public class GameThread {
 
-    private int numberOfPlayers = 4;
-    private int[] winners = new int[numberOfPlayers];
+    private static final int NUMBER_OF_PLAYERS = 3;
+    private int[] winners;
     private int winnersCounter = 0;
 
     public GameThread() {
         PlayersCollection playersCollection = new PlayersCollection();
         Cards cards = new Cards();
         cards.shuffle();
-        playersCollection.createPlayers(numberOfPlayers);
-        playersCollection.dealTheCards(cards.getCardsCollection());
-        PlayersManagement playersManagement = new PlayersManagement(playersCollection);
-        //playersCollection.showPlayersHands();
 
-        playersCollection.showPlayersHands();
+        winners = new int[NUMBER_OF_PLAYERS];
+
+        playersCollection.createPlayers(NUMBER_OF_PLAYERS);
+
+        PlayersManagement playersManagement = new PlayersManagement(playersCollection);
+        playersManagement.dealTheCards(cards.getCardsCollection());
+        playersManagement.showPlayersHands();
 
         Arrays.fill(winners, -1);
 
-        while (winnersCounter < numberOfPlayers - 1) {
-            for (int i = 0; i < numberOfPlayers; i++) {
+        while (winnersCounter < NUMBER_OF_PLAYERS - 1) {
+            for (int i = 0; i < NUMBER_OF_PLAYERS; i++) {
                 if (winners[i] != 1) {
                     int idNext = nextPlayerId(i);
-                    System.out.println("Current player: " + i);
-                    System.out.println("Next player: " + idNext);
                     Card card = playersManagement.takeCardFromPlayer(idNext);
                     if (playersManagement.checkWin(idNext)) {
                         setWinner(idNext);
                         break;
                     }
-                    playersManagement.checkPair(i, card); //Black widow in loop to fix
+                    playersManagement.checkPair(i, card);
                     if (playersManagement.checkWin(i)) {
                         setWinner(i);
                         break;
@@ -60,7 +58,7 @@ public class GameThread {
         else if (winners[id + 1] == 1)
             return nextPlayerId(id + 1);
         else
-            return id + 1 < numberOfPlayers ? id + 1 : 0;
+            return id + 1 < NUMBER_OF_PLAYERS ? id + 1 : 0;
 
     }
 }
