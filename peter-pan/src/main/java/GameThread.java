@@ -11,6 +11,7 @@ public class GameThread {
 
     private int numberOfPlayers = 4;
     private int[] winners = new int[numberOfPlayers];
+    private int winnersCounter = 0;
 
     public GameThread() {
         PlayersCollection playersCollection = new PlayersCollection();
@@ -24,42 +25,33 @@ public class GameThread {
         playersCollection.showPlayersHands();
 
         Arrays.fill(winners, -1);
-        int winnersCounter = 0;
-        boolean skip;
+
         while (winnersCounter < numberOfPlayers - 1) {
             for (int i = 0; i < numberOfPlayers; i++) {
-                skip = false;
-                if (winners[i] == 1) {
-                    skip = true;
-                    //System.out.println(i + "k");
-                }
-                if (!skip) {
-                    int id = nextPlayerId(i);
+                if (winners[i] != 1) {
+                    int idNext = nextPlayerId(i);
                     System.out.println("Current player: " + i);
-                    System.out.println("Next player: " + id);
-                    try {
-                        if (playersManagement.checkWin(i)) {
-                            winners[i] = 1;
-                            System.out.println("Win!!!!!!!!!!!!!!!!!!!!!!!!!" + i);
-                            winnersCounter++;
-                            break;
-                        } else {
-                            playersCollection.showPlayersHands();
-                        }
-                        Card card = playersManagement.takeCardFromPlayer(id);
-                        playersManagement.checkPair(i, card); //Black widow in loop to fix
-                    } catch (IllegalStateException ex) {
-                        System.out.println(ex.getMessage());
-                        playersCollection.showPlayersHands();
+                    System.out.println("Next player: " + idNext);
+                    Card card = playersManagement.takeCardFromPlayer(idNext);
+                    if (playersManagement.checkWin(idNext)) {
+                        setWinner(idNext);
+                        break;
                     }
-
-
+                    playersManagement.checkPair(i, card); //Black widow in loop to fix
+                    if (playersManagement.checkWin(i)) {
+                        setWinner(i);
+                        break;
+                    }
                 }
             }
         }
         for (int i = 0; i < winners.length; i++)
             System.out.println("Player " + (i + 1) + ": " + winners[i]);
-        //playersCollection.showPlayersHands();
+    }
+    private void setWinner(int id){
+        winners[id] = 1;
+        System.out.println("Win!!!!!!!!!!!!!!!!!!!!!!!!!" + id);
+        winnersCounter++;
     }
 
     private int nextPlayerId(int id) {
