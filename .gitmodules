@@ -1,0 +1,3 @@
+[submodule "git-ignore-test"]
+	path = git-ignore-test
+	url = C:/Program Files/Git/git-ignore-test
