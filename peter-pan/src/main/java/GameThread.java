@@ -37,12 +37,12 @@ public class GameThread extends Thread {
                     Card card = playersManagement.takeCardFromPlayer(idNext);
                     if (playersManagement.checkWin(idNext)) {
                         setWinner(idNext);
-                        break;
+                        //break;
                     }
                     playersManagement.checkPair(i, card);
                     if (playersManagement.checkWin(i)) {
                         setWinner(i);
-                        break;
+                        //break;
                     }
                 }
             }
@@ -57,6 +57,8 @@ public class GameThread extends Thread {
     private void setWinner(int id) {
         winners[id] = 1;
         winnersCounter++;
+        System.out.println("Player " + id + " wins");
+        playersManagement.showPlayersHands();
     }
 
     private int nextPlayerId(int id) {
