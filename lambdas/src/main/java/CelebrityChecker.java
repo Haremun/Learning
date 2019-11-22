@@ -1,12 +1,15 @@
 import java.util.List;
+import java.util.function.Predicate;
 
 public class CelebrityChecker {
 
-    public void check (List<Celebrity> celebrities, CheckTalent checkTalent) {
+
+    public void check(List<Celebrity> celebrities, Predicate<Celebrity> checker) {
         for (Celebrity celebrity :
                 celebrities) {
-            if ( checkTalent.test(celebrity))
+            if (checker.test(celebrity))
                 System.out.println(celebrity.toString());
         }
     }
+
 }
